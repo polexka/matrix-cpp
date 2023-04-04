@@ -4,6 +4,7 @@ TComplex::TComplex() : re(0.0), im(0.0) {}
 
 TComplex::TComplex(double r, double i) : re(r), im(i) {}
 
+TComplex::TComplex(int i) : re(0.0), im(0.0 + i) {}
 
 TComplex TComplex::operator + (const TComplex & c)
 {
@@ -34,11 +35,11 @@ TComplex & TComplex::operator = (const TComplex& c)
     return *this;
 }
 
-TComplex & TComplex::operator = (int c)
+/* TComplex & TComplex::operator = (int c)
 {
     this->re = this->re + c;
     return *this;
-}
+} */
 
 bool TComplex::operator == (const TComplex & c)
 {
